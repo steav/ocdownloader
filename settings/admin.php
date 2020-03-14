@@ -11,9 +11,7 @@
 
 use OCA\ocDownloader\Controller\Lib\Settings;
 
-if (!OC_User::isAdminUser(OC_User::getUser())) {
-   return;
-}
+\OC_Util::checkAdminUser();
 
 // Display template
 \OCP\Util::addStyle('ocdownloader', 'settings/admin');
